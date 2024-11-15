@@ -11,7 +11,7 @@ body{
 	color: #c4c3ca;
 	background-color: #1f2029;
   	background-image: url('C:/Users/Hoa/Documents/Portfolio/assets/Images/Fond.png');
-	background-size: 100%;
+	background-size: 125%;
   	background-position: center;
   	background-repeat:  no-repeat;
 	overflow-x: hidden;
@@ -24,6 +24,19 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+@media screen and (max-width: 1200px){
+	body{
+		background-size: 150%;
+	}
+}
+@media screen and (max-width: 1000px){
+	body{
+		background-size: 200%;
+	}
+}
+
+
 
 /* #Cursor
 ================================================== */
@@ -103,7 +116,8 @@ a:hover {
 .header-wrapper{
     position: relative;
 	width: calc(100% - 100px);
-	margin-left: 50px;
+	display: flex;
+	justify-content: space-between;
 } 
 
 .nav-but-wrap{ 
@@ -396,7 +410,71 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 /*planetgit */
-img{
-	height: 90px;
-	width: auto;
+
+.planete{
+	position: absolute;
+}
+
+.who{
+	width: 10%;
+	height: auto;
+	left: 188px;
+	top: 207px;
+}
+
+.skills{
+	width: 9%;
+	height: auto;
+	left: 558px;
+	top: 651px;
+
+}
+
+.project{
+	width: 9.5%;
+	height: auto;
+	left: 955px;
+	top: 75px;
+
+}
+
+.credit{
+	width: 7%;
+	height: auto;
+	left: 1255px;
+	top: 600px;
+}
+
+@media screen and (max-width: 1400px){
+	.skills{
+		left: 480px;
+		top: 651px;
+	}
+	.project{
+		left: 680px;
+		top: 75px;
+	}
+	.credit{
+		left: 890px;
+		top: 600px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.who{
+		left: 100px;
+		top: 207px;
+	}
+	.skills{
+		left: 360px;
+		top: 651px;
+	}
+	.project{
+		left: 480px;
+		top: 75px;
+	}
+	.credit{
+		left: 640px;
+		top: 600px;
+	}
 }
