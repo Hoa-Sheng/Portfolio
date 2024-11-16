@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: "chakra petch", sans-serif;
 	height: 100%;
    	overflow-y: hidden;
 	font-weight: 300;
@@ -304,7 +304,7 @@ body.nav-active .nav {
 	visibility: visible;
 }
 body.nav-active .nav:before, body.nav-active .nav:after {
-	width: 250px;
+	width: 275px;
 	height: 350px;
 	border-radius: 15px;
 }
@@ -415,15 +415,16 @@ body.nav-active .nav__list-item:nth-child(10) {
 	position: absolute;
 }
 
+
 .who{
-	width: 10%;
+	width: 180px;
 	height: auto;
 	left: 188px;
 	top: 207px;
 }
 
 .skills{
-	width: 9%;
+	width: 125px;
 	height: auto;
 	left: 558px;
 	top: 651px;
@@ -431,7 +432,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .project{
-	width: 9.5%;
+	width: 155px;
 	height: auto;
 	left: 955px;
 	top: 75px;
@@ -439,7 +440,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .credit{
-	width: 7%;
+	width: 85px;
 	height: auto;
 	left: 1255px;
 	top: 600px;
@@ -462,19 +463,106 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 @media screen and (max-width: 1000px){
 	.who{
+		width: 135px;
 		left: 100px;
 		top: 207px;
 	}
 	.skills{
+		width: 94px;
 		left: 360px;
 		top: 651px;
 	}
 	.project{
+		width: 116px;
 		left: 480px;
 		top: 75px;
 	}
 	.credit{
+		width: 64px;
 		left: 640px;
 		top: 600px;
+	}
+}
+
+.planete:hover{
+	transform: scale(1.1);
+}
+
+/*ring*/
+
+@keyframes loader {
+	0% {
+	  rotate: 360deg;
+	}
+}
+
+.ring{
+	position: absolute;
+	animation: loader 100s infinite;
+}
+
+.ring_who{
+	width: 265px;
+	height: auto;
+	left: 145px;
+	top: 167px;
+}
+
+.ring_skills{
+	width: 155px;
+	height: auto;
+	left: 542px;
+	top: 638px;
+}
+
+.ring_project{
+	width: 195px;
+	height: auto;
+	left: 934px;
+	top: 56px;
+}
+
+.ring_credit{
+	width: 115px;
+	height: auto;
+	left: 1240px;
+	top: 586px;
+}
+
+@media screen and (max-width: 1400px){
+	.ring_skills{
+		left: 465px;
+		top: 638px;
+	}
+	.ring_project{
+		left: 660px;
+		top: 56px;
+	}
+	.ring_credit{
+		left: 875px;
+		top: 585px;
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.ring_who{
+		width: 199px;
+		left: 68px;
+		top: 177px;
+	}
+	.ring_skills{
+		width: 120px;
+		left: 346px;
+		top: 639px;
+	}
+	.ring_project{
+		width: 146px;
+		left: 465px;
+		top: 62px;
+	}
+	.ring_credit{
+		width: 86px;
+		left: 629px;
+		top: 590px;
 	}
 }

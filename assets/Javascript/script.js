@@ -48,20 +48,6 @@
 			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
 		};
 		init();
-	}();
-
-	
-	//Switch light/dark
-	
-	$("#switch").on('click', function () {
-		if ($("body").hasClass("light")) {
-			$("body").removeClass("light");
-			$("#switch").removeClass("switched");
-		}
-		else {
-			$("body").addClass("light");
-			$("#switch").addClass("switched");
-		}
-	});          
+	}();         
               
 })(jQuery); 
