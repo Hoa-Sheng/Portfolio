@@ -3,16 +3,13 @@
 
 body{
 	font-family: "chakra petch", sans-serif;
-	height: 100%;
    	overflow-y: hidden;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
-	color: #c4c3ca;
 	background-color: #1f2029;
   	background-image: url('C:/Users/Hoa/Documents/Portfolio/assets/Images/Fond.png');
 	background-size: 125%;
-  	background-position: center;
   	background-repeat:  no-repeat;
 	overflow-x: hidden;
 	-webkit-transition: all 300ms linear;
@@ -20,6 +17,7 @@ body{
 }
 a {
 	cursor: pointer;
+	text-decoration: none	;
 }
 a:hover {
 	text-decoration: none;
@@ -115,7 +113,6 @@ a:hover {
 } 
 .header-wrapper{
     position: relative;
-	width: calc(100% - 100px);
 	display: flex;
 	justify-content: space-between;
 } 
@@ -125,7 +122,8 @@ a:hover {
 	display: inline-block;
 	padding-left: 15px;
 	padding-top: 15px;
-	margin-top: 26px;
+	margin-left: 20px;
+	margin-top: 25px;
 	transition : all 0.3s ease-out;
 }
 .menu-icon {
@@ -409,9 +407,9 @@ body.nav-active .nav__list-item:nth-child(10) {
 	background: #000;
 }
 
-/*planetgit */
+/*planet */
 
-.planete{
+.planet{
 	position: absolute;
 }
 
@@ -478,34 +476,59 @@ body.nav-active .nav__list-item:nth-child(10) {
 		top: 75px;
 	}
 	.credit{
-		width: 64px;
+
 		left: 640px;
 		top: 600px;
 	}
 }
 
-.planete:hover{
-	transform: scale(1.1);
-}
 
 /*ring*/
 
-@keyframes loader {
-	0% {
-	  rotate: 360deg;
-	}
+@keyframes baseRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes hoverEffect {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }	
 }
 
-.ring{
-	position: absolute;
-	animation: loader 100s infinite;
+@keyframes reverseHoverEffect {
+    0% { 
+		transform: rotate(360deg) scale(1.1); 
+	}
+    100% { 
+		transform: rotate(0deg) scale(1); 
+	}
+}
+.ring {
+    position: absolute;
+    animation: baseRotation 100s linear infinite;
+    transition: transform 0.5s ease-in-out;
+}
+
+.planet_and_ring:hover .ring {
+    animation: hoverEffect 1.5s ease-in-out forwards;
+}
+
+.planet_and_ring .ring.reverse-hover {
+    animation: reverseHoverEffect 1.5s ease-in-out forwards;
 }
 
 .ring_who{
 	width: 265px;
 	height: auto;
 	left: 145px;
-	top: 167px;
+	top: 166px;
 }
 
 .ring_skills{
@@ -518,7 +541,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 .ring_project{
 	width: 195px;
 	height: auto;
-	left: 934px;
+	left: 935px;
 	top: 56px;
 }
 
@@ -544,7 +567,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 	}
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1000px){
 	.ring_who{
 		width: 199px;
 		left: 68px;
@@ -553,16 +576,158 @@ body.nav-active .nav__list-item:nth-child(10) {
 	.ring_skills{
 		width: 120px;
 		left: 346px;
-		top: 639px;
+		top: 638px;
 	}
 	.ring_project{
 		width: 146px;
 		left: 465px;
-		top: 62px;
+		top: 61px;
 	}
 	.ring_credit{
 		width: 86px;
 		left: 629px;
 		top: 590px;
+	}
+}
+
+/*Texte*/
+
+.planet_name{
+	color: #F5F5F5;
+	text-decoration: none;
+}
+
+.text_who{
+	position: absolute;
+	left: 350px;
+	top: 380px;
+	border: 3px solid #F5F5F5;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 20px;
+}
+
+.text_skills{
+	position: absolute;
+	left: 675px;
+	top: 750px;
+	border: 3px solid #F5F5F5;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 20px;
+}
+
+.text_project{
+	position: absolute;
+	left: 1100px;
+	top: 200px;
+	border: 3px solid #F5F5F5;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 20px;
+}
+
+.text_credit{
+	position: absolute;
+	left: 1340px;
+	top: 660px;
+	border: 3px solid #F5F5F5;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 1400px){
+	.text_skills{
+		left: 600px;
+		top: 750px;
+	}
+	.text_project{
+		left: 820px;
+		top: 200px;
+	}
+	.text_credit{
+		left: 970px;
+		top: 660px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.text_who{
+		left: 250px;
+		top: 310px;
+	}
+	.text_skills{
+		left: 460px;
+		top: 700px;
+	}
+	.text_project{
+		left: 600px;
+		top: 150px;
+	}
+	.text_credit{
+		left: 700px;
+		top: 640px;
+	}
+}
+
+/*Phone_version*/
+
+@media screen and (max-width: 750px){
+	body{
+		background-size: 400%;
+		height: auto;
+		overflow-y: scroll;
+	}
+	.full-height {
+		height: 100%;
+	}
+	.planet{
+		position: static;
+		width: 150px;
+		margin-right: 10px;
+	}
+	.ring{
+		left: -999em;
+	}
+	.planet_name{
+		font-size: 44px;
+	}
+	.text_who{
+		position: static;
+	}
+	.text_skills{
+		position: static;
+	}
+	.text_project{
+		position: static;
+	}
+	.text_credit{
+		position: static;
+	}
+	.contenair{
+		margin-top: 90px;
+	}
+	.planet_and_ring{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		border: 3px solid #dba950;
+		padding: 10px 30px;
+		margin: 0px 20px 30px 20px;
+
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}
+
+@media screen and (max-width: 588px){
+	body{
+		background-size: 700%;
+	}
+	.planet_and_ring{
+		flex-direction: column;
+		padding-top: 20px;
 	}
 }
