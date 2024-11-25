@@ -1,3 +1,5 @@
+
+
 body{
     background-size: 100%;
     color: aliceblue;
@@ -22,7 +24,6 @@ p{
     transform: translate(-50%, -50%);
     margin: auto;
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -48,4 +49,30 @@ p{
 
 .js{
     background-color: blue;
+}
+
+.carroussel-wrapper{
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.sliders{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300%;
+    height: 100%;
+}
+
+.slider{
+    width:calc(91% / 3);
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
 }
