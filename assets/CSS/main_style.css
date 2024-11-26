@@ -85,6 +85,10 @@ a:hover {
 	}
 }
 
+.hidden{
+	opacity: 0;
+}
+
 /* #Primary style
 ================================================== */
 
@@ -406,3 +410,12 @@ body.nav-active .nav__list-item:nth-child(10) {
 	background: #000;
 }
 
+/* footer */
+
+footer img{
+	position: absolute;
+	width: 10%;
+	top: 100px;
+	left: 75%;
+
+}

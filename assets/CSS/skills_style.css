@@ -1,21 +1,15 @@
-
+h2{
+    font-family: poppins;
+}
 
 body{
-    background-size: 100%;
     color: aliceblue;
+    background-size: 125%;
 }
 
 p{
     margin: 0px;
 }
-
-.pie {
-    width: 300px;
-    height: 300px;
-    background-image: conic-gradient(red 0deg, red 180deg, green 180deg, green 330deg, blue 230deg);    
-    border-radius: 50%;
-    margin-right: 30px;
-}  
 
 .contenair{
     position: absolute;
@@ -26,6 +20,124 @@ p{
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 1400px){
+    body{   
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    body{   
+        background-size: 125%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body{   
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-color: rgb(24, 0, 44);
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-size: 500%;
+    }
+}
+
+/*carroussel parameters*/
+
+.carroussel-wrapper{
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+
+.sliders{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300%;
+    height: 100%;
+    padding: 0px;
+}
+
+.slider{
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+@media screen and (max-width: 1100px){
+    .carroussel-wrapper{
+        width: 750px;
+    }
+    .slider{
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .carroussel-wrapper{
+        width: 500px;
+    }
+    .slider{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .slider{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .carroussel-wrapper{
+        width: 300px;
+        height: 700px;
+    }
+    .slider{
+        width: 300px;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .carroussel-wrapper{
+        width: 200px;
+        height: 700px;
+    }
+    .slider{
+        width: 200px;
+        height: 700px;
+    } 
+}
+
+/*first_slide*/
+
+.pie {
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(#E8790C 0deg, #E8790C 180deg, #FFEFA8 180deg, #FFEFA8 330deg, #F2A65E  230deg);    
+    border-radius: 50%;
+    margin-right: 30px;
+}  
 
 .square{
     height: 20px;
@@ -40,39 +152,105 @@ p{
 }
 
 .python{
-    background-color: red;
+    background-color: #E8790C;
 }
 
 .htmlcss{
-    background-color: green;
+    background-color: #FFEFA8;
 }
 
 .js{
-    background-color: blue;
+    background-color: #F2A65E;
+}
+@media screen and (max-width: 900px){
+    .pie{
+        width: 175px;
+        height: 175px;
+    }
 }
 
-.carroussel-wrapper{
-    position: relative;
-    width: 1000px;
-    height: 400px;
-    overflow: hidden;
-    margin:0 auto;
+@media screen and (max-width: 800px){
+    .pie{
+        width: 120px;
+        height: 120px;
+        margin: 0px;
+    }
 }
 
-.sliders{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 300%;
-    height: 100%;
+/*second_slide*/
+
+.python_title{
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.slider{
-    width:calc(91% / 3);
-    height: 100%;
+.slider_container_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider_container_text h2{
+    padding-bottom: 50px;
+}
+
+.python_librairies{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+}
+
+.slider img{
+    width: 50%;
+    height: auto;
+}
+
+.python_librairies_contenair{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    float: left;
+    border-radius: 20px;
+    width: 300px;
+    margin: 5px;
+    background-color: #FFEFA8 ;
+    color: #000;
 }
+
+.python_librairies_contenair p{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 900px){
+    .python_librairies_contenair{
+        width: 200px;
+        flex-direction: column;
+    }
+}
+
+/*button*/
+
+.prev{
+    width: 47px;
+    height: 47px;
+    background: #cd9548;
+
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+    transition: transform 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.next{
+    width: 47px;
+    height: 47px;
+    background: #cd9548;
+    clip-path: polygon(0 0, 0% 100%, 50% 48%);
+    transition: transform 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+

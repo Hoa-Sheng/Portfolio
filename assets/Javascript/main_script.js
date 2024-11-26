@@ -52,3 +52,30 @@
               
 })(jQuery); 
 
+window.addEventListener("load", function () {
+	const stats = this.document.querySelectorAll('.stat')
+	const body = document.querySelector("main");
+
+	body.classList.remove(".hidden");
+	
+
+
+
+	window.addEventListener("scroll", function () {
+
+    stats.forEach(function(el, key) {
+      setTimeout(function() {
+        el.classList.remove('hidden')
+      }, 500 * key)
+      
+    })
+
+		// stats.forEach(function (el, key) {
+		// 	setTimeout(function () {
+		// 		el.classList.remove("hidden");
+		// 	}, 400 * key);
+		// });
+
+
+	});
+});

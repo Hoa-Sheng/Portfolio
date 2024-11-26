@@ -30,8 +30,8 @@
 				<div class="nav">
 					<div class="nav__content">
 						<ul class="nav__list">
-							<li class="nav__list-item active-nav"><a href="space.html" class="hover-target">Accueil</a></li>
-							<li class="nav__list-item"><a href="skills.html" class="hover-target">Qui suis je ?</a></li>
+							<li class="nav__list-item"><a href="space.html" class="hover-target">Accueil</a></li>
+							<li class="nav__list-item active-nav"><a href="skills.html" class="hover-target">Qui suis je ?</a></li>
 							<li class="nav__list-item"><a href="#" class="hover-target">Compétences</a></li>
 							<li class="nav__list-item"><a href="#" class="hover-target">Projets</a></li>
 							<li class="nav__list-item"><a href="#" class="hover-target">Contact/Crédits</a></li>
@@ -46,12 +46,12 @@
 			<section>
 				<div>
 					<div class="contenair">
-						<button class="prev">Prev</button>
+						<button class="prev"></button>
 						<div class="carroussel-wrapper">
 							<ul class=sliders>
 								<li class="slider">
 									<div class="pie"></div>
-									<div>
+									<div class="legend">
 										<h2>Compétences</h2>
 										<div class="pie_chart_legend">
 											<div class="square python"></div>
@@ -67,15 +67,35 @@
 										</div>
 									</div>
 								</li>
-								<li class="slider">07</li>
-								<li class="slider"></li>
+								<li class="slider">
+									<div class="slider_container_text">
+										<h2 class="python_title">Les librairies python que je maitrise :</h2>
+										<div class="python_librairies">
+											<div class="python_librairies_contenair">
+												<img src="assets/Images/numpy.png" alt="NumPy logo">
+												<p>NumPy</p>
+											</div>
+											<div class="python_librairies_contenair">
+												<img src="assets/Images/Pandas_logo.svg" alt="pandas logo">
+												<p>Pandas</p>
+											</div>
+											<div class="python_librairies_contenair">
+												<img src="assets\Images\scikit-learn-logo.svg" alt="scikit learn logo">
+												<p>Scikit learn</p>
+											</div>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</div>
-						<button class="next">Next</button>
+						<button class="next"></button>
 					</div>
 				</div>
 			</section>
 		</main>
+		<footer>
+			<img src="assets\Images\planete_2.png" alt="surface de la planete">
+		</footer>
 		<script src="assets\Javascript\main_script.js"></script>
 		<script src="assets\Javascript\skills_script.js"></script>
 	</body>

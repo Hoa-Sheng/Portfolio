@@ -1,6 +1,6 @@
 var sliders = $(".sliders li").length;
 var index = 0;
-var size = 100/sliders;
+var size = 66.8/sliders;
 var translated = 0;
 console.log(sliders);
 
