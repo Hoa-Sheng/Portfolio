@@ -1,0 +1,197 @@
+@import "https://open-props/shadows.min.css" layer(design.system);
+
+body{
+    background-size: 100%;
+}
+@media screen and (max-width: 1400px){
+    body{   
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    body{   
+        background-size: 125%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body{   
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-size: 500%;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100cqi) scale(.75);
+    }
+}
+
+.scroll-stack {
+    container-type: inline-size;
+    inline-size: 100cqi;
+
+    display: grid;
+    grid-auto-flow: column;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+
+    gap: 1rem;
+    padding-inline: 1rem;
+    scroll-padding-inline: 1rem;
+    padding-block: 100px 60px;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+    }
+
+    &::before {
+        order: 0;
+        inline-size: 25cqi;
+    }
+
+    &::after {
+        order: 11;
+        inline-size: 80cqi;
+    }
+
+    .item {
+        scroll-snap-align: start;
+
+        &:nth-child(1) { order: 10; z-index: 1; }
+        &:nth-child(2) { order: 9; z-index: 2; }
+        &:nth-child(3) { order: 8; z-index: 3; }
+        &:nth-child(4) { order: 7; z-index: 4; }
+        &:nth-child(5) { order: 6; z-index: 5; }
+        &:nth-child(6) { order: 5; z-index: 6; }
+        &:nth-child(7) { order: 4; z-index: 7; }
+        &:nth-child(8) { order: 3; z-index: 8; }
+        &:nth-child(9) { order: 2; z-index: 9; }
+    }
+    figure, .item{
+        @supports (animation-timeline: view()) {
+            @media (prefers-reduced-motion: no-preference) {
+                animation: slide-in linear both;
+                animation-timeline: view(x);
+                animation-range: cover -75cqi contain 20cqi;
+                }
+        }
+
+        flex-shrink: 0;
+        block-size: 80cqb;
+        aspect-ratio: 9/16;
+        box-shadow: var(--shadow-5);
+        border-radius: 20px;
+        overflow: clip;
+        display: flex;
+        background: rgba(38, 41, 71, 0.6);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @container (width < 480px) {
+            block-size: 50cqb;
+        }
+
+        > img {
+            inline-size: 100%;
+            block-size: 50%;
+            object-fit: cover;
+            border-radius: 20px;
+            
+        }
+        }
+    }
+
+    @layer support {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    html {
+        block-size: 100%;
+        color-scheme: dark light;
+    }
+
+    body {
+        min-block-size: 100%;
+        font-family: system-ui, sans-serif;
+
+        display: grid;
+        place-items: center;
+    }
+}
+
+.full-height {
+	height: 0;
+}
+
+h2{
+    font-size: 26px;
+    margin: 15px 0px;
+}
+
+.box {
+    position: absolute;
+    border:3px solid black;  
+    opacity:0;
+    background: white;
+    display: none;
+    transition: top 0.5s, left 0.5s, right 0.5s, bottom 0.5s, opacity 0.5s;
+    z-index:10;
+    text-align: center;
+    font-size:2em;
+    overflow: hidden;
+}
+
+.app_logo{
+    height: 40px;
+    width: auto;
+}
+
+.github_button{
+    width: 80%;
+    border: 1px solid #c1c1c1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 20px 20px;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #6452A8;
+    padding: 10px 0px;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 511px){
+    h2{
+        font-size: 20px;
+    }
+    .app_logo{
+        height: 20px;
+    }
+    figure p{
+        position: absolute;
+        left: -999rem;
+    }
+}

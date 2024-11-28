@@ -1,0 +1,42 @@
+body{
+    background-size: 100%;
+}
+@media screen and (max-width: 1400px){
+    body{   
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    body{   
+        background-size: 125%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body{   
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-size: 500%;
+    }
+}
+
+.contenair{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+}

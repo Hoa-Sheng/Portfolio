@@ -1,0 +1,98 @@
+body{
+    background-size: 100%;
+}
+@media screen and (max-width: 1400px){
+    body{   
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    body{   
+        background-size: 125%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body{   
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-size: 500%;
+    }
+}
+
+
+.contact_me{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea { 
+    margin: .8em auto;
+    font-family: inherit; 
+    text-transform: inherit; 
+    font-size: inherit;
+    display: block; 
+    width: 280px; 
+    padding: .4em;
+    border: 1px solid #EA9755;
+    border-radius: 5px;
+    font-family: poppins;
+}
+
+textarea { 
+    height: 80px; 
+    resize: none; 
+}
+
+.formBtn { 
+    display: inline-block;
+    background: #EA9755;
+    font-weight: 100;
+    font-size: 1.2em;
+    font-weight: 400;
+    border: none;
+
+}
+.contact{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #EA9755;
+    margin-top: 100px;
+    background-color: rgba(234, 151, 85, 0.8);
+    padding: 70px;
+}
+
+.contact_title{
+    font-weight: 700;
+}
+
+.linkedin_logo{
+    width: 50px;
+    height: auto;
+}
