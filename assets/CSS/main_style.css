@@ -11,7 +11,7 @@ body{
 	font-size: 15px;
 	line-height: 1.7;
 	background-color: #1f2029;
-	background-image: url('C:/Users/Hoa/Documents/Portfolio/assets/Images/Fond.png');
+	background-image: url('./Fond.png');
 	background-repeat:  no-repeat;
 	overflow-x: hidden;
 	-webkit-transition: all 300ms linear;
