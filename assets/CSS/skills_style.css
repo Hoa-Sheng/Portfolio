@@ -224,6 +224,10 @@ p{
     font-weight: 500;
 }
 
+.matplotlib_logo{
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 900px){
     .python_librairies_contenair{
         width: 200px;

@@ -70,6 +70,7 @@ textarea {
     font-size: 1.2em;
     font-weight: 400;
     border: none;
+    transition: 0.5s ease-in-out;
 
 }
 .contact{
@@ -80,6 +81,7 @@ textarea {
     width: 100%;
     margin: auto;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     border-top: 1px solid #EA9755;
@@ -95,4 +97,28 @@ textarea {
 .linkedin_logo{
     width: 50px;
     height: auto;
+}
+
+.linkedin_Btn{
+    transition: 0.5s ease-in-out;
+}
+.linkedin_Btn:hover{
+    transform: scale(1.2);
+}
+
+.formBtn:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px){
+    .contact{
+        top: 90%;
+
+    }
+}
+
+@media screen and (max-width: 410px){
+    .contact{
+        padding: 35px;
+    }
 }

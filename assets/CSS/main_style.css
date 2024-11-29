@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
+
+
+
 body{
 	font-family: "chakra petch", sans-serif;
    	overflow-y: hidden;
@@ -15,6 +18,8 @@ body{
 	transition: all 300ms linear;
 	color: #fff;
 }
+
+
 a {
 	cursor: pointer;
 	text-decoration: none	;
@@ -34,6 +39,13 @@ a:hover {
 	}
 }
 
+h2{
+	font-family: poppins;
+}
+
+p{
+	font-family: chakra petch;
+}
 
 
 /* #Cursor
@@ -443,7 +455,24 @@ footer img{
 	position: absolute;
 	width: 10%;
 	top: 100px;
-	left: 75%;
+	left: 80%;
 	min-width: 100px;
+	z-index: 1;
 
 }
+
+/* Animation */
+
+.animation{
+    animation: fadeInUp 2s ease-out forwards; /* L'animation dure 1s, effet de fondu et translation */ /* Décale les éléments un peu vers le bas au début */
+}
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
