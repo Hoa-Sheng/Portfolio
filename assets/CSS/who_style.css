@@ -48,3 +48,22 @@ body{
 .contenair h2{
     font-size: 60px;
 }
+
+@media screen and (max-width: 850px){
+    .contenair p{
+        font-size: 15px;
+    }
+    
+    .contenair h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 450px){
+    .contenair{
+        width: 100%;
+        margin: 0px 20px;
+    }
+    .contenair h2, .contenair p{
+        text-align: center;
+    }
+}
