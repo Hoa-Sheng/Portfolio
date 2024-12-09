@@ -1,5 +1,6 @@
 body{
     background-size: 100%;
+    margin: 0;
 }
 @media screen and (max-width: 1400px){
     body{   
@@ -120,5 +121,37 @@ textarea {
 @media screen and (max-width: 410px){
     .contact{
         padding: 35px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .full-height {
+		height: 100%;
+	}
+    body{
+        overflow-y: hidden;
+    }
+
+    .contact_me, .contact{
+        position: static;
+        margin: 200px 0 0 0;
+        transform: translate(0, 0);
+        
+    }
+    .contact{
+        width: 100%;
+        padding: 0px 0px 200px;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        border-top: 1px solid #EA9755;
+        margin-top: 100px;
+        background-color: rgba(234, 151, 85, 0.8);
+    }
+    footer{
+        position: relative;
+        left: -999rem;
     }
 }
